@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ShareMeals() {
+export default function ShareMealsPage() {
   return (
     <>
       <h1>Share Meals</h1>

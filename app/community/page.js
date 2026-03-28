@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Community() {
+export default function CommunityPage() {
   return (
     <>
-      <h1>Our Community</h1>
+      <h1>Our Community Page</h1>
       <p>
         <Link href="/">Back</Link>
       </p>
