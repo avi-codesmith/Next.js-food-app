@@ -1,6 +1,6 @@
 # Next.js Food project
 
-## 🟢 [Live demo](https://reactjs-amazon-project.netlify.app/)
+## 🟢 [Live demo](https://nextjsfood.netlify.app/)
 
 ---
 
