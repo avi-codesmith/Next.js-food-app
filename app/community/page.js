@@ -5,6 +5,11 @@ import communityIcon from "@/assets/icons/community.png";
 import eventsIcon from "@/assets/icons/events.png";
 import classes from "./page.module.css";
 
+export const metadata = {
+  title: "Foodies community",
+  description: "About our foodies community",
+};
+
 export default function CommunityPage() {
   return (
     <>

@@ -17,6 +17,7 @@ export default function ShareMealPage() {
       instructions: "",
     },
   });
+
   return (
     <>
       <header className={classes.header}>
