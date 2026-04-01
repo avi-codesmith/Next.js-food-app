@@ -7,7 +7,16 @@ import FormButton from "@/components/meals/form-button";
 import { useFormState } from "react-dom";
 
 export default function ShareMealPage() {
-  const [state, formAction] = useFormState(ShareMeal, { message: null });
+  const [state, formAction] = useFormState(ShareMeal, {
+    message: null,
+    enteredValues: {
+      name: "",
+      email: "",
+      title: "",
+      summary: "",
+      instructions: "",
+    },
+  });
   return (
     <>
       <header className={classes.header}>
@@ -21,20 +30,40 @@ export default function ShareMealPage() {
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
-              <input type="text" id="name" name="name" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                defaultValue={state?.enteredValues?.name}
+              />
             </p>
             <p>
               <label htmlFor="email">Your email</label>
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                defaultValue={state?.enteredValues?.email}
+              />
             </p>
           </div>
           <p>
             <label htmlFor="title">Title</label>
-            <input type="text" id="title" name="title" />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              defaultValue={state?.enteredValues?.title}
+            />
           </p>
           <p>
             <label htmlFor="summary">Short Summary</label>
-            <input type="text" id="summary" name="summary" />
+            <input
+              type="text"
+              id="summary"
+              name="summary"
+              defaultValue={state?.enteredValues?.summary}
+            />
           </p>
           <p>
             <label htmlFor="instructions">Instructions</label>
@@ -42,10 +71,15 @@ export default function ShareMealPage() {
               id="instructions"
               name="instructions"
               rows="10"
+              defaultValue={state?.enteredValues?.instructions}
             ></textarea>
           </p>
+          <ImagePicker
+            label={"your image"}
+            name={"image"}
+            dValue={state?.enteredValues?.instructions}
+          />
           <p>{state?.message}</p>
-          <ImagePicker label={"your image"} name={"image"} />
           <p className={classes.actions}>
             <FormButton />
           </p>

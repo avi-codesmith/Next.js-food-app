@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import classes from "./image-picker.module.css";
 
-export default function ImagePicker({ label, name }) {
+export default function ImagePicker({ label, name, dValue }) {
   const [image, setImage] = useState();
   const imageInput = useRef();
   function hanldeImgInput() {
@@ -34,7 +34,7 @@ export default function ImagePicker({ label, name }) {
           id={name}
           ref={imageInput}
           onChange={hanldeImgPreview}
-          required
+          defaultValue={dValue}
         />
         <div className={classes.preview}>
           {image && <Image src={image} alt={"Your picked Image"} fill />}
